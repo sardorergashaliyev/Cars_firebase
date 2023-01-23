@@ -1,7 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Addnumber extends StatefulWidget {
   const Addnumber({super.key});
@@ -17,16 +15,21 @@ class _AddnumberState extends State<Addnumber> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: TextFormField(
-            controller: textEditingController,
-            keyboardType: TextInputType.number,
+      body: Column(
+        children: [
+          const Icon(Icons.sms),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: TextFormField(
+                controller: textEditingController,
+              ),
+            ),
           ),
-        ),
+        ],
       ),
       floatingActionButton: IconButton(
+        color: Colors.blue,
         icon: const Icon(Icons.add),
         onPressed: () async {
           await FirebaseAuth.instance.verifyPhoneNumber(
