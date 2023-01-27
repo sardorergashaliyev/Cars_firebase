@@ -1,6 +1,22 @@
 {
-    "user": {
-        "name": "james",
-        "phone": "99899"
+    "chat": {
+      "sender": {
+        "name": "Jobir",
+        "id": 1
+      },
+      "resender": {
+        "name": "Tester",
+        "id": 2
+      },
+      "mess": [
+        {
+          "id": 1,
+          "title": "Salom"
+        },
+        {
+          "id": 2,
+          "title": "Najot talim"
+        }
+      ]
     }
-}
+  }
